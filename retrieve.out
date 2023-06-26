@@ -1,0 +1,395 @@
+[info] welcome to sbt 1.6.2 (Ubuntu Java 11.0.18)
+[info] loading settings for project scientificsearch-build-build-build from metals.sbt ...
+[info] loading project definition from /usr/project/xtmp/rg315/ScientificSearch/project/project/project
+[info] loading settings for project scientificsearch-build-build from metals.sbt ...
+[info] loading project definition from /usr/project/xtmp/rg315/ScientificSearch/project/project
+[success] Generated .bloop/scientificsearch-build-build.json
+[success] Total time: 2 s, completed May 11, 2023, 4:10:51 AM
+[info] loading settings for project scientificsearch-build from plugins.sbt ...
+[info] loading project definition from /usr/project/xtmp/rg315/ScientificSearch/project
+[success] Generated .bloop/scientificsearch-build.json
+[success] Total time: 2 s, completed May 11, 2023, 4:10:54 AM
+[info] loading settings for project core from build.sbt ...
+[info] loading settings for project extra from build.sbt ...
+[info] loading settings for project scientificsearch from build.sbt,version.sbt ...
+[info] set current project to scientificsearch (in build file:/usr/project/xtmp/rg315/ScientificSearch/)
+[warn] there's a key that's not used by any other settings/tasks:
+[warn]  
+[warn] * ThisBuild / publishMavenStyle
+[warn]   +- /usr/project/xtmp/rg315/ScientificSearch/build.sbt:130
+[warn]  
+[warn] note: a setting might still be used by a command; to exclude a key from this `lintUnused` check
+[warn] either append it to `Global / excludeLintKeys` or call .withRank(KeyRanks.Invisible) on the key
+[info] compiling 1 Scala source to /usr/project/xtmp/rg315/ScientificSearch/core/target/scala-2.12/classes ...
+[info] done compiling
+[info] running (fork) export.GetAllMatches 
+[info] 04:11:53,467 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+[info] 04:11:53,467 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+[info] 04:11:53,468 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/usr/project/xtmp/rg315/ScientificSearch/target/bg-jobs/sbt_212c17df/target/3bf56cb3/333cb718/odinson-core_2.12-0.6.2-SNAPSHOT.jar!/logback.xml]
+[info] 04:11:53,478 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@48e1f6c7 - URL [jar:file:/usr/project/xtmp/rg315/ScientificSearch/target/bg-jobs/sbt_212c17df/target/3bf56cb3/333cb718/odinson-core_2.12-0.6.2-SNAPSHOT.jar!/logback.xml] is not of type file
+[info] 04:11:53,646 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+[info] 04:11:53,646 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+[info] 04:11:53,652 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+[info] 04:11:53,742 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - This appender no longer admits a layout as a sub-component, set an encoder instead.
+[info] 04:11:53,742 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
+[info] 04:11:53,742 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - See also http://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
+[info] 04:11:53,743 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [ai.lum.odinson] to DEBUG
+[info] 04:11:53,743 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting additivity of logger [ai.lum.odinson] to false
+[info] 04:11:53,744 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ai.lum.odinson]
+[info] 04:11:53,744 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to ERROR
+[info] 04:11:53,745 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+[info] 04:11:53,746 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+[info] 04:11:53,747 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@55cb6996 - Registering current configuration as safe fallback point
+[error] [dynet] Loading DyNet from /tmp/libdynet_swig-12338040772081946989.so...
+[error] [dynet] random seed: 2522620396
+[error] [dynet] allocating memory: 512MB
+[error] [dynet] memory allocation done.
+[error] WARNING: An illegal reflective access operation has occurred
+[error] WARNING: Illegal reflective access by com.esotericsoftware.kryo.unsafe.UnsafeUtil (file:/usr/project/xtmp/rg315/ScientificSearch/target/bg-jobs/sbt_212c17df/target/298c1893/bc2b0985/kryo-5.1.1.jar) to constructor java.nio.DirectByteBuffer(long,int)
+[error] WARNING: Please consider reporting this to the maintainers of com.esotericsoftware.kryo.unsafe.UnsafeUtil
+[error] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+[error] WARNING: All illegal access operations will be denied in a future release
+[info] Failed to process query 43_3
+[info] Failed to process query 54_4
+[info] Failed to process query 79_1
+[info] Failed to process query 91_2
+[info] Processed 100 Queries
+[info] Failed to process query 160_1
+[info] Algorithm1Algorithm2Failed to process query 167_2
+[info] Failed to process query 189_2
+[info] Failed to process query 200_4
+[info] Failed to process query 208_4
+[info] Failed to process query 218_1
+[info] Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Algorithm6Algorithm7Algorithm8Failed to process query 293_0
+[info] Failed to process query 312_2
+[info] Failed to process query 312_4
+[info] Failed to process query 334_2
+[info] Failed to process query 334_3
+[info] Failed to process query 345_1
+[info] Processed 200 Queries
+[info] Failed to process query 366_0
+[info] Failed to process query 388_1
+[info] Failed to process query 388_2
+[info] Failed to process query 399_2
+[info] Failed to process query 399_4
+[info] Failed to process query 407_0
+[info] Failed to process query 407_1
+[info] Failed to process query 407_4
+[info] Failed to process query 440_4
+[info] Failed to process query 495_1
+[info] Algorithm1Algorithm2Failed to process query 506_4
+[info] Failed to process query 515_0
+[info] Failed to process query 537_1
+[info] Processed 300 Queries
+[info] Failed to process query 672_2
+[info] Failed to process query 689_1
+[info] Failed to process query 689_2
+[info] Failed to process query 689_3
+[info] Algorithm1Failed to process query 730_1
+[info] Processed 400 Queries
+[info] Failed to process query 741_2
+[info] Failed to process query 756_1
+[info] Failed to process query 756_2
+[info] Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Algorithm6Algorithm7Algorithm8Algorithm9Algorithm10Algorithm11Algorithm12Algorithm13Algorithm14Algorithm15Algorithm16Algorithm17Algorithm18Algorithm19Algorithm20Algorithm21Algorithm1Algorithm2Algorithm3Algorithm4Failed to process query 798_1
+[info] Failed to process query 803_2
+[info] Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Algorithm6Algorithm7Algorithm8Algorithm9Algorithm10Algorithm11Algorithm12Algorithm13Algorithm14Algorithm15Algorithm16Algorithm17Algorithm18Algorithm19Algorithm20Algorithm21Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Algorithm6Algorithm7Algorithm8Algorithm9Algorithm10Algorithm11Algorithm12Algorithm13Algorithm14Algorithm15Algorithm16Algorithm17Algorithm18Algorithm19Algorithm20Algorithm21Failed to process query 855_0
+[info] Failed to process query 855_2
+[info] Failed to process query 882_0
+[info] Failed to process query 882_2
+[info] Processed 500 Queries
+[info] Failed to process query 999_0
+[info] Failed to process query 1021_2
+[info] Failed to process query 1057_0
+[info] Failed to process query 1067_4
+[info] Processed 600 Queries
+[info] Failed to process query 1100_3
+[info] Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Algorithm6Algorithm7Algorithm8Algorithm9Algorithm10Algorithm11Algorithm12Algorithm13Algorithm14Algorithm15Algorithm16Algorithm17Algorithm18Algorithm19Algorithm20Algorithm21Algorithm22Algorithm23Algorithm24Algorithm25Algorithm26Algorithm27Algorithm28Algorithm29Failed to process query 1195_0
+[info] Failed to process query 1195_1
+[info] Failed to process query 1195_2
+[info] Failed to process query 1195_3
+[info] Failed to process query 1195_4
+[info] Failed to process query 1205_1
+[info] Failed to process query 1205_2
+[info] Failed to process query 1264_0
+[info] Failed to process query 1264_3
+[info] Processed 700 Queries
+[info] Failed to process query 1327_2
+[info] Algorithm1Failed to process query 1384_0
+[info] Failed to process query 1434_3
+[info] Failed to process query 1449_4
+[info] Processed 800 Queries
+[info] Failed to process query 1460_1
+[info] Failed to process query 1471_3
+[info] Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Algorithm6Algorithm7Algorithm8Algorithm9Algorithm10Algorithm11Algorithm12Algorithm13Algorithm14Algorithm15Algorithm16Algorithm17Algorithm18Algorithm19Algorithm20Algorithm21Algorithm22Algorithm23Algorithm24Algorithm25Algorithm26Algorithm27Algorithm28Algorithm29Algorithm30Algorithm31Algorithm32Algorithm33Algorithm34Algorithm35Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Algorithm6Algorithm7Algorithm8Algorithm9Algorithm10Algorithm11Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Algorithm6Algorithm7Algorithm8Algorithm9Algorithm10Algorithm11Algorithm12Algorithm13Algorithm14Algorithm15Algorithm16Algorithm17Algorithm18Algorithm19Algorithm20Algorithm21Algorithm22Algorithm23Algorithm24Algorithm25Algorithm26Algorithm27Algorithm28Algorithm29Algorithm30Algorithm31Algorithm32Algorithm33Algorithm34Algorithm35Failed to process query 1500_2
+[info] Failed to process query 1511_1
+[info] Failed to process query 1522_2
+[info] Failed to process query 1581_2
+[info] Failed to process query 1603_0
+[info] Failed to process query 1614_0
+[info] Failed to process query 1614_4
+[info] Failed to process query 1625_2
+[info] Processed 900 Queries
+[info] Failed to process query 1664_0
+[info] Failed to process query 1664_1
+[info] Failed to process query 1664_4
+[info] Algorithm1Failed to process query 1702_1
+[info] Failed to process query 1702_3
+[info] Failed to process query 1737_3
+[info] Failed to process query 1770_0
+[info] Failed to process query 1770_1
+[info] Failed to process query 1770_4
+[info] Failed to process query 1820_3
+[info] Failed to process query 1841_4
+[info] Processed 1000 Queries
+[info] Failed to process query 1865_1
+[info] Failed to process query 1865_4
+[info] Failed to process query 1924_1
+[info] Failed to process query 1960_2
+[info] Failed to process query 2023_0
+[info] Processed 1100 Queries
+[info] Failed to process query 2053_0
+[info] Failed to process query 2093_1
+[info] Failed to process query 2113_2
+[info] Failed to process query 2135_2
+[info] Failed to process query 2153_4
+[info] Failed to process query 2203_3
+[info] Processed 1200 Queries
+[info] Failed to process query 2276_2
+[info] Failed to process query 2298_2
+[info] Failed to process query 2335_1
+[info] Failed to process query 2383_0
+[info] Failed to process query 2405_0
+[info] Failed to process query 2433_1
+[info] Processed 1300 Queries
+[info] Failed to process query 2488_2
+[info] Failed to process query 2488_4
+[info] Failed to process query 2515_4
+[info] Failed to process query 2532_0
+[info] Failed to process query 2547_3
+[info] Failed to process query 2601_4
+[info] Processed 1400 Queries
+[info] Failed to process query 2661_0
+[info] Failed to process query 2718_3
+[info] Failed to process query 2797_3
+[info] Processed 1500 Queries
+[info] Failed to process query 2851_4
+[info] Failed to process query 2888_3
+[info] Failed to process query 2895_3
+[info] Failed to process query 2904_3
+[info] Failed to process query 2915_2
+[info] Failed to process query 2915_4
+[info] Failed to process query 2977_0
+[info] Failed to process query 2977_4
+[info] Failed to process query 3027_1
+[info] Failed to process query 3038_0
+[info] Failed to process query 3038_1
+[info] Processed 1600 Queries
+[info] Failed to process query 3038_3
+[info] Failed to process query 3058_1
+[info] Failed to process query 3075_1
+[info] Failed to process query 3086_2
+[info] Failed to process query 3091_2
+[info] Failed to process query 3098_1
+[info] Failed to process query 3120_0
+[info] Failed to process query 3120_1
+[info] Failed to process query 3131_0
+[info] Failed to process query 3170_0
+[info] Failed to process query 3170_1
+[info] Failed to process query 3181_0
+[info] Failed to process query 3189_0
+[info] Failed to process query 3210_1
+[info] Failed to process query 3210_4
+[info] Processed 1700 Queries
+[info] Failed to process query 3220_3
+[info] Failed to process query 3231_1
+[info] Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Algorithm6Algorithm7Algorithm8Algorithm9Algorithm10Algorithm11Algorithm12Algorithm13Algorithm14Algorithm15Algorithm16Algorithm17Algorithm18Algorithm19Algorithm20Algorithm21Algorithm22Algorithm23Algorithm24Algorithm25Algorithm26Algorithm27Algorithm28Algorithm29Algorithm30Algorithm31Algorithm32Algorithm33Algorithm34Algorithm35Algorithm36Algorithm37Algorithm38Algorithm39Algorithm40Algorithm41Algorithm42Algorithm43Algorithm44Algorithm45Algorithm46Algorithm47Algorithm48Algorithm49Algorithm50Algorithm51Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Algorithm6Algorithm7Algorithm8Algorithm9Algorithm10Algorithm11Algorithm12Algorithm13Algorithm14Algorithm15Algorithm16Failed to process query 3253_4
+[info] Failed to process query 3266_0
+[info] Failed to process query 3324_3
+[info] Failed to process query 3340_1
+[info] Failed to process query 3347_4
+[info] Failed to process query 3358_3
+[info] Failed to process query 3382_3
+[info] Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Algorithm6Algorithm7Algorithm8Algorithm9Algorithm10Algorithm11Algorithm12Algorithm13Algorithm14Algorithm15Algorithm16Algorithm17Algorithm18Algorithm19Algorithm20Algorithm21Algorithm22Algorithm23Algorithm24Algorithm25Algorithm26Algorithm27Processed 1800 Queries
+[info] Failed to process query 3411_3
+[info] Failed to process query 3471_2
+[info] Failed to process query 3514_0
+[info] Failed to process query 3527_4
+[info] Failed to process query 3571_1
+[info] Failed to process query 3571_4
+[info] Failed to process query 3598_1
+[info] Processed 1900 Queries
+[info] Failed to process query 3629_0
+[info] Failed to process query 3629_1
+[info] Failed to process query 3629_2
+[info] Failed to process query 3629_3
+[info] Failed to process query 3629_4
+[info] Failed to process query 3674_4
+[info] Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Algorithm1Algorithm2Failed to process query 3748_2
+[info] Failed to process query 3766_1
+[info] Failed to process query 3777_3
+[info] Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Processed 2000 Queries
+[info] Failed to process query 3810_2
+[info] Failed to process query 3810_3
+[info] Failed to process query 3877_3
+[info] Failed to process query 3888_2
+[info] Failed to process query 3899_1
+[info] Failed to process query 3899_2
+[info] Failed to process query 3910_0
+[info] Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Algorithm6Algorithm7Algorithm8Algorithm9Algorithm10Algorithm11Algorithm12Algorithm13Algorithm14Algorithm15Algorithm16Algorithm17Algorithm18Algorithm19Algorithm20Algorithm21Algorithm22Algorithm23Algorithm24Algorithm25Algorithm26Algorithm27Algorithm28Algorithm29Algorithm30Algorithm31Algorithm32Algorithm33Algorithm34Algorithm35Algorithm36Algorithm37Algorithm38Algorithm39Algorithm40Algorithm41Algorithm42Algorithm43Algorithm44Algorithm45Algorithm46Algorithm47Algorithm48Algorithm49Algorithm50Algorithm51Algorithm52Algorithm53Algorithm54Algorithm55Algorithm56Algorithm57Algorithm58Algorithm59Algorithm60Algorithm61Algorithm62Algorithm63Algorithm64Algorithm65Algorithm66Algorithm67Algorithm68Algorithm69Algorithm70Algorithm71Algorithm72Algorithm73Algorithm74Algorithm75Algorithm76Algorithm77Algorithm78Algorithm79Algorithm80Algorithm81Algorithm82Algorithm83Algorithm84Algorithm85Algorithm86Failed to process query 3976_1
+[info] Failed to process query 3976_3
+[info] Processed 2100 Queries
+[info] Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Algorithm6Algorithm7Algorithm8Algorithm9Algorithm10Algorithm11Algorithm12Algorithm13Algorithm14Algorithm15Algorithm16Algorithm17Algorithm18Algorithm19Algorithm20Algorithm21Algorithm22Algorithm23Algorithm24Algorithm25Algorithm26Algorithm27Algorithm28Algorithm29Algorithm30Algorithm31Algorithm32Algorithm33Algorithm34Algorithm35Algorithm36Algorithm37Algorithm38Failed to process query 4051_0
+[info] Failed to process query 4095_1
+[info] Failed to process query 4095_2
+[info] Failed to process query 4124_1
+[info] Failed to process query 4157_2
+[info] Processed 2200 Queries
+[info] Failed to process query 4211_4
+[info] Failed to process query 4233_3
+[info] Failed to process query 4286_2
+[info] Failed to process query 4294_0
+[info] Failed to process query 4294_2
+[info] Failed to process query 4304_3
+[info] Failed to process query 4304_4
+[info] Failed to process query 4315_3
+[info] Failed to process query 4326_1
+[info] Failed to process query 4337_0
+[info] Failed to process query 4337_1
+[info] Failed to process query 4337_2
+[info] Failed to process query 4337_3
+[info] Failed to process query 4337_4
+[info] Algorithm1Failed to process query 4352_1
+[info] Algorithm1Algorithm2Failed to process query 4352_3
+[info] Processed 2300 Queries
+[info] Failed to process query 4406_0
+[info] Algorithm1Algorithm2Failed to process query 4456_4
+[info] Failed to process query 4500_1
+[info] Failed to process query 4511_0
+[info] Failed to process query 4511_1
+[info] Failed to process query 4511_2
+[info] Failed to process query 4511_3
+[info] Failed to process query 4511_4
+[info] Failed to process query 4549_3
+[info] Failed to process query 4560_3
+[info] Processed 2400 Queries
+[info] Failed to process query 4666_3
+[info] Failed to process query 4747_0
+[info] Failed to process query 4747_1
+[info] Failed to process query 4791_0
+[info] Processed 2500 Queries
+[info] Failed to process query 4797_2
+[info] Failed to process query 4797_3
+[info] Failed to process query 4804_0
+[info] Failed to process query 4885_0
+[info] Failed to process query 4885_2
+[info] Failed to process query 4896_1
+[info] Failed to process query 4901_3
+[info] Failed to process query 4909_0
+[info] Failed to process query 4909_3
+[info] Failed to process query 4941_0
+[info] Processed 2600 Queries
+[info] Failed to process query 4955_2
+[info] Failed to process query 5009_0
+[info] Failed to process query 5009_4
+[info] Failed to process query 5041_1
+[info] Failed to process query 5085_1
+[info] Algorithm1Algorithm2Failed to process query 5104_1
+[info] Failed to process query 5106_1
+[info] Processed 2700 Queries
+[info] Failed to process query 5142_4
+[info] Failed to process query 5231_0
+[info] Failed to process query 5259_1
+[info] Algorithm1Failed to process query 5300_2
+[info] Processed 2800 Queries
+[info] Failed to process query 5349_4
+[info] Failed to process query 5398_1
+[info] Failed to process query 5398_3
+[info] Failed to process query 5402_3
+[info] Failed to process query 5409_2
+[info] Failed to process query 5464_1
+[info] Failed to process query 5464_4
+[info] Failed to process query 5474_2
+[info] Processed 2900 Queries
+[info] Failed to process query 5560_1
+[info] Failed to process query 5563_1
+[info] Failed to process query 5563_3
+[info] Failed to process query 5574_2
+[info] Failed to process query 5574_4
+[info] Failed to process query 5585_2
+[info] Failed to process query 5605_1
+[info] Processed 3000 Queries
+[info] Failed to process query 5801_1
+[info] Failed to process query 5829_0
+[info] Processed 3100 Queries
+[info] Failed to process query 5913_3
+[info] Failed to process query 5924_2
+[info] Algorithm1Algorithm2Algorithm1Failed to process query 5963_2
+[info] Failed to process query 6014_0
+[info] Failed to process query 6036_0
+[info] Failed to process query 6036_3
+[info] Processed 3200 Queries
+[info] Failed to process query 6096_3
+[info] Failed to process query 6118_0
+[info] Failed to process query 6134_3
+[info] Failed to process query 6144_3
+[info] Failed to process query 6198_3
+[info] Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Algorithm6Algorithm7Algorithm8Processed 3300 Queries
+[info] Failed to process query 6309_2
+[info] Failed to process query 6317_2
+[info] Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Algorithm6Algorithm7Failed to process query 6379_0
+[info] Failed to process query 6403_2
+[info] Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Algorithm6Algorithm7Algorithm8Algorithm9Algorithm10Algorithm11Algorithm12Algorithm13Algorithm14Algorithm15Algorithm16Processed 3400 Queries
+[info] Failed to process query 6424_1
+[info] Failed to process query 6456_4
+[info] Failed to process query 6466_3
+[info] Failed to process query 6477_3
+[info] Failed to process query 6483_0
+[info] Failed to process query 6488_4
+[info] Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Algorithm6Algorithm7Algorithm8Algorithm9Algorithm10Algorithm11Algorithm12Algorithm13Algorithm14Algorithm15Algorithm16Algorithm17Algorithm18Algorithm19Algorithm20Algorithm21Algorithm22Algorithm23Algorithm24Algorithm25Algorithm26Algorithm27Algorithm28Algorithm29Algorithm30Algorithm31Algorithm32Algorithm33Algorithm34Algorithm35Algorithm36Algorithm37Algorithm38Algorithm39Algorithm40Algorithm41Algorithm42Algorithm43Algorithm44Algorithm45Algorithm46Algorithm47Algorithm48Algorithm49Algorithm50Algorithm51Algorithm52Algorithm53Algorithm54Algorithm55Algorithm56Algorithm57Algorithm58Algorithm59Algorithm60Algorithm61Algorithm62Algorithm63Algorithm64Algorithm65Algorithm66Algorithm67Algorithm68Algorithm69Algorithm70Algorithm71Algorithm72Algorithm73Algorithm74Algorithm75Algorithm76Algorithm77Algorithm78Algorithm79Algorithm80Algorithm81Algorithm82Algorithm83Algorithm84Algorithm85Algorithm86Algorithm87Algorithm88Algorithm89Algorithm90Algorithm91Algorithm92Algorithm93Algorithm94Algorithm95Algorithm96Algorithm97Algorithm98Algorithm99Algorithm100Algorithm101Algorithm102Algorithm103Algorithm104Algorithm105Algorithm106Algorithm107Algorithm108Algorithm109Algorithm110Algorithm111Algorithm112Algorithm113Algorithm114Algorithm115Algorithm116Algorithm117Algorithm118Algorithm119Algorithm120Algorithm121Algorithm122Algorithm123Algorithm124Algorithm125Algorithm126Algorithm127Algorithm128Algorithm129Algorithm130Algorithm1Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Algorithm6Algorithm7Algorithm8Algorithm9Algorithm10Algorithm11Algorithm12Algorithm13Algorithm14Algorithm15Algorithm16Algorithm17Algorithm18Algorithm19Algorithm20Algorithm21Algorithm22Algorithm23Algorithm24Algorithm25Algorithm26Algorithm27Algorithm28Algorithm29Algorithm30Algorithm31Algorithm32Algorithm33Algorithm34Algorithm35Algorithm36Algorithm37Algorithm38Algorithm39Algorithm40Algorithm41Algorithm42Algorithm43Algorithm44Algorithm45Algorithm46Algorithm47Algorithm48Algorithm49Algorithm50Algorithm51Algorithm52Algorithm53Algorithm54Algorithm55Algorithm56Algorithm57Algorithm58Algorithm59Algorithm60Algorithm61Algorithm62Algorithm63Algorithm64Algorithm65Algorithm66Algorithm67Algorithm68Algorithm69Algorithm70Algorithm71Algorithm72Algorithm73Algorithm74Algorithm75Algorithm76Algorithm77Algorithm78Algorithm79Algorithm80Algorithm81Algorithm82Algorithm83Algorithm84Algorithm85Algorithm86Algorithm87Algorithm88Algorithm89Algorithm90Algorithm91Algorithm92Algorithm93Algorithm94Algorithm95Algorithm96Algorithm97Algorithm98Algorithm99Algorithm100Algorithm101Algorithm102Algorithm103Algorithm104Algorithm105Algorithm106Algorithm107Algorithm108Algorithm109Algorithm110Algorithm111Algorithm112Algorithm113Algorithm114Algorithm115Algorithm116Algorithm117Algorithm118Algorithm119Algorithm120Algorithm121Algorithm122Algorithm123Algorithm124Algorithm125Algorithm126Algorithm127Algorithm128Algorithm129Algorithm130Algorithm131Algorithm132Algorithm133Algorithm134Algorithm135Algorithm136Algorithm137Algorithm138Algorithm139Algorithm140Algorithm141Algorithm142Algorithm143Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Algorithm6Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Algorithm1Failed to process query 6562_2
+[info] Processed 3500 Queries
+[info] Failed to process query 6591_2
+[info] Failed to process query 6642_0
+[info] Failed to process query 6674_1
+[info] Failed to process query 6720_0
+[info] Failed to process query 6720_4
+[info] Processed 3600 Queries
+[info] Failed to process query 6742_1
+[info] Failed to process query 6780_0
+[info] Failed to process query 6821_0
+[info] Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Processed 3700 Queries
+[info] Failed to process query 6914_4
+[info] Failed to process query 6958_3
+[info] Failed to process query 6966_2
+[info] Failed to process query 6983_1
+[info] Failed to process query 6983_3
+[info] Failed to process query 7007_4
+[info] Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Algorithm6Algorithm7Algorithm8Algorithm9Algorithm10Algorithm11Algorithm12Algorithm13Algorithm14Algorithm15Algorithm16Algorithm17Algorithm18Algorithm19Algorithm20Algorithm21Algorithm22Algorithm23Algorithm24Algorithm25Algorithm26Algorithm27Algorithm28Algorithm29Algorithm30Algorithm31Algorithm32Algorithm33Algorithm34Algorithm35Algorithm36Algorithm37Algorithm38Algorithm39Algorithm40Algorithm41Algorithm42Algorithm43Failed to process query 7070_2
+[info] Processed 3800 Queries
+[info] Failed to process query 7117_3
+[info] Failed to process query 7126_2
+[info] Failed to process query 7166_4
+[info] Failed to process query 7185_3
+[info] Failed to process query 7223_1
+[info] Failed to process query 7223_2
+[info] Failed to process query 7223_3
+[info] Failed to process query 7223_4
+[info] Failed to process query 7228_0
+[info] Failed to process query 7228_1
+[info] Processed 3900 Queries
+[info] Failed to process query 7264_4
+[info] Algorithm1Algorithm2Algorithm3Algorithm4Algorithm5Algorithm6Algorithm7Algorithm8Algorithm9Algorithm10Algorithm11Algorithm12Algorithm13Algorithm14Algorithm15Algorithm16Algorithm17Algorithm18Algorithm19Algorithm20Failed to process query 7279_2
+[info] Failed to process query 7295_4
+[info] Processed 4000 Queries
+[info] Failed to process query 7416_1
+[info] Algorithm1Failed to process query 7505_0
+[info] Failed to process query 7507_2
+[info] Failed to process query 7507_3
+[info] Failed to process query 7517_1
+[info] Failed to process query 7545_2
+[info] Failed to process query 7564_1
+[info] Processed 4100 Queries
+[info] Failed to process query 7569_3
+[info] Algorithm1Failed to process query 7597_4
+[info] Failed to process query 7606_0
+[info] Algorithm1Processed 4200 Queries
+[info] Failed to process query 7721_3

@@ -15,6 +15,18 @@ import scala.collection.GenIterable
 object IndexDocuments extends App with LazyLogging {
 
   var config = ConfigFactory.load()
+  
+  config = config.withValue(
+          "odinson.indexDir",
+          ConfigValueFactory.fromAnyRef(args(0))
+        )
+  val n = args(1).toInt
+  val start = n * 20000
+  var end = (n + 1) * 20000
+  if (end > 5737815){
+    end = 5737815
+  }
+
 
   // Warn that the API requires parentDocFieldFileName
   val storedFields = config.apply[List[String]]("odinson.index.storedFields")
@@ -25,27 +37,27 @@ object IndexDocuments extends App with LazyLogging {
     )
   }
 
-  if (args.length == 1) {
+  // if (args.length == 1) {
 
-    val dirPath = args(0)
-    val passedInDataDir = new File(dirPath).getAbsolutePath
-    val passedInIndexDir = new File(passedInDataDir, "index").getAbsolutePath
-    val passedInDocsDir = new File(passedInDataDir, "docs").getAbsolutePath
+  //   val dirPath = args(0)
+  //   val passedInDataDir = new File(dirPath).getAbsolutePath
+  //   val passedInIndexDir = new File(passedInDataDir, "index").getAbsolutePath
+  //   val passedInDocsDir = new File(passedInDataDir, "docs").getAbsolutePath
 
-    logger.info(s"Received dataDir as a parameter <${dirPath}>")
-    // receive the path from the arguments
-    config = config
-      .withValue("odinson.dataDir", ConfigValueFactory.fromAnyRef(passedInDataDir))
-      // re-compute the index and docs path's
-      .withValue(
-        "odinson.indexDir",
-        ConfigValueFactory.fromAnyRef(passedInIndexDir)
-      )
-      .withValue(
-        "odinson.docsDir",
-        ConfigValueFactory.fromAnyRef(passedInDocsDir)
-      )
-  }
+  //   logger.info(s"Received dataDir as a parameter <${dirPath}>")
+  //   // receive the path from the arguments
+  //   config = config
+  //     .withValue("odinson.dataDir", ConfigValueFactory.fromAnyRef(passedInDataDir))
+  //     // re-compute the index and docs path's
+  //     .withValue(
+  //       "odinson.indexDir",
+  //       ConfigValueFactory.fromAnyRef(passedInIndexDir)
+  //     )
+  //     .withValue(
+  //       "odinson.docsDir",
+  //       ConfigValueFactory.fromAnyRef(passedInDocsDir)
+  //     )
+  // }
   //
   val docsDir = config.apply[File]("odinson.docsDir")
 
@@ -58,19 +70,20 @@ object IndexDocuments extends App with LazyLogging {
 
   // make this a function
   val documentFiles =
-    if (synchronizeOrderWithDocumentId) {
-      // files ordered by the id of the document
+    // if (synchronizeOrderWithDocumentId) {
+    //   // files ordered by the id of the document
+    //   docsDir
+    //     .listFilesByWildcards(odinsonDocsWildcards, recursive = true)
+    //     .map(f => (Document.fromJson(f).id.toInt, f))
+    //     .toSeq
+    //     .sortBy(_._1)
+    //     .map(_._2)
+    // } else {
       docsDir
         .listFilesByWildcards(odinsonDocsWildcards, recursive = true)
-        .map(f => (Document.fromJson(f).id.toInt, f))
-        .toSeq
-        .sortBy(_._1)
-        .map(_._2)
-    } else {
-      docsDir
-        .listFilesByWildcards(odinsonDocsWildcards, recursive = true)
+        .slice(start, end)
         .par
-    }
+    // }
 
   // ^ this part should be a function
   logger.info("Indexing documents")
@@ -81,6 +94,7 @@ object IndexDocuments extends App with LazyLogging {
   // Note that documentFiles may or may not be parallel, hence the GenIterable
   def indexDocuments(documentFiles: GenIterable[File]): Unit = {
     // index documents
+    var count = 0
     for (f <- documentFiles) {
       Try {
         val filename = StringField(name = "fileName", string = f.getName)
@@ -91,11 +105,15 @@ object IndexDocuments extends App with LazyLogging {
         index.indexOdinsonDoc(doc)
       } match {
         case Success(_) =>
-          logger.info(s"Indexed ${f.getName}")
+          count += 1
+          if (count % 10000 == 0){
+            println(s"Indexed ${count} documents")
+          }
         case Failure(e) =>
           logger.error(s"Failed to index ${f.getName}", e)
       }
     }
+    println(s"Indexed ${count} documents in total")
   }
 
 }

@@ -6,6 +6,7 @@ import scala.util.control.Breaks._
 import scala.util.control.NonFatal
 import ai.lum.common.ConfigFactory
 import ai.lum.common.ConfigUtils._
+import com.typesafe.config.{ Config, ConfigValueFactory }
 import ai.lum.common.FileUtils._
 import ai.lum.odinson.serialization.JsonSerializer
 import ai.lum.odinson.utils.DisplayUtils.displayMention
@@ -38,7 +39,11 @@ object ScientificSearchEngine extends App with LazyLogging {
   // Specify paths and settings in the local config file
   val debug = false
   val print_query = true
-  val config = ConfigFactory.load()
+  var config = ConfigFactory.load()
+  config = config.withValue(
+          "odinson.indexDir",
+          ConfigValueFactory.fromAnyRef("/usr/xtmp/rg315/wikipedia_indices_splitted/0/")
+        )
   val outputFile = config.apply[File]("odinson.extra.outputFile")
   val rulesFile = config.apply[String]("odinson.extra.rulesFile")
   val displayField = config.apply[String]("odinson.displayField")

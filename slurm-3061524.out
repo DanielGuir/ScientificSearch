@@ -1,0 +1,55 @@
+[info] welcome to sbt 1.6.2 (Ubuntu Java 11.0.18)
+[info] loading settings for project scientificsearch-build-build-build from metals.sbt ...
+[info] loading project definition from /usr/project/xtmp/rg315/ScientificSearch/project/project/project
+[info] loading settings for project scientificsearch-build-build from metals.sbt ...
+[info] loading project definition from /usr/project/xtmp/rg315/ScientificSearch/project/project
+[success] Generated .bloop/scientificsearch-build-build.json
+[success] Total time: 2 s, completed May 1, 2023, 3:45:41 PM
+[info] loading settings for project scientificsearch-build from plugins.sbt ...
+[info] loading project definition from /usr/project/xtmp/rg315/ScientificSearch/project
+[success] Generated .bloop/scientificsearch-build.json
+[success] Total time: 3 s, completed May 1, 2023, 3:45:46 PM
+[info] loading settings for project core from build.sbt ...
+[info] loading settings for project extra from build.sbt ...
+[info] loading settings for project frontend from build.sbt ...
+[info] loading settings for project scientificsearch from build.sbt,version.sbt ...
+[info] set current project to scientificsearch (in build file:/usr/project/xtmp/rg315/ScientificSearch/)
+[warn] there's a key that's not used by any other settings/tasks:
+[warn]  
+[warn] * ThisBuild / publishMavenStyle
+[warn]   +- /usr/project/xtmp/rg315/ScientificSearch/build.sbt:130
+[warn]  
+[warn] note: a setting might still be used by a command; to exclude a key from this `lintUnused` check
+[warn] either append it to `Global / excludeLintKeys` or call .withRank(KeyRanks.Invisible) on the key
+[info] compiling 1 Scala source to /usr/project/xtmp/rg315/ScientificSearch/core/target/scala-2.12/classes ...
+[info] done compiling
+[info] running (fork) ai.lum.odinson.extra.AnnotateText /usr/xtmp/rg315/generated_20181220_10000/0/ /usr/xtmp/rg315/annotated_documents/ CluProcessor
+[info] 15:47:02,984 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+[info] 15:47:02,987 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+[info] 15:47:02,990 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/usr/project/xtmp/rg315/ScientificSearch/target/bg-jobs/sbt_36d35056/target/3bf56cb3/79e84071/odinson-core_2.12-0.6.2-SNAPSHOT.jar!/logback.xml]
+[info] 15:47:03,018 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@70be0a2b - URL [jar:file:/usr/project/xtmp/rg315/ScientificSearch/target/bg-jobs/sbt_36d35056/target/3bf56cb3/79e84071/odinson-core_2.12-0.6.2-SNAPSHOT.jar!/logback.xml] is not of type file
+[info] 15:47:03,438 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+[info] 15:47:03,439 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+[info] 15:47:03,453 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+[info] 15:47:03,639 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - This appender no longer admits a layout as a sub-component, set an encoder instead.
+[info] 15:47:03,639 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
+[info] 15:47:03,639 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - See also http://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
+[info] 15:47:03,642 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [ai.lum.odinson] to DEBUG
+[info] 15:47:03,642 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting additivity of logger [ai.lum.odinson] to false
+[info] 15:47:03,642 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ai.lum.odinson]
+[info] 15:47:03,643 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to ERROR
+[info] 15:47:03,643 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+[info] 15:47:03,643 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+[info] 15:47:03,646 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@2133814f - Registering current configuration as safe fallback point
+[error] [dynet] Loading DyNet from /tmp/libdynet_swig-8859673960791889340.so...
+[error] [dynet] random seed: 2522620396
+[error] [dynet] allocating memory: 512MB
+[error] [dynet] memory allocation done.
+[info] 2023-05-01 15:47:04 [main] INFO  ai.lum.odinson.extra.AnnotateText$ - Start
+[error] WARNING: An illegal reflective access operation has occurred
+[error] WARNING: Illegal reflective access by com.esotericsoftware.kryo.unsafe.UnsafeUtil (file:/usr/project/xtmp/rg315/ScientificSearch/target/bg-jobs/sbt_36d35056/target/298c1893/bc2b0985/kryo-5.1.1.jar) to constructor java.nio.DirectByteBuffer(long,int)
+[error] WARNING: Please consider reporting this to the maintainers of com.esotericsoftware.kryo.unsafe.UnsafeUtil
+[error] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+[error] WARNING: All illegal access operations will be denied in a future release
+[info] 2023-05-01 15:47:28 [main] INFO  ai.lum.odinson.extra.AnnotateText$ - Resource Loaded
+slurmstepd: error: *** JOB 3061524 ON linux9 CANCELLED AT 2023-05-01T15:49:50 ***

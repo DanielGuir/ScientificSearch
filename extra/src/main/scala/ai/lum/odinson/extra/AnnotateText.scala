@@ -15,36 +15,39 @@ import ai.lum.odinson.extra.utils.ProcessorsUtils.getProcessor
 import org.clulab.utils.FileUtils
 
 object AnnotateText extends App with LazyLogging {
+  // var config = ConfigFactory.load()
 
-  var config = ConfigFactory.load()
+  // if (args.length > 0) {
+  //   val dirPath = args(0)
 
-  if (args.length > 0) {
-    val dirPath = args(0)
+  //   val processor =
+  //     if (args.length == 2) args(1) else config.apply[String]("odinson.extra.processorType")
 
-    val processor =
-      if (args.length == 2) args(1) else config.apply[String]("odinson.extra.processorType")
+  //   logger.info(s"Received dataDir as a parameter <$dirPath>")
+  //   // receive the path from the arguments
+  //   config = config
+  //     .withValue(
+  //       "odinson.textDir",
+  //       ConfigValueFactory.fromAnyRef(new File(dirPath, "text").getAbsolutePath)
+  //     )
+  //     // re-compute the index and docs path's
+  //     .withValue(
+  //       "odinson.docsDir",
+  //       ConfigValueFactory.fromAnyRef(new File(dirPath, "docs").getAbsolutePath)
+  //     )
+  //     .withValue(
+  //       "odinson.processorType",
+  //       ConfigValueFactory.fromAnyRef(processor)
+  //     )
+  // }
 
-    logger.info(s"Received dataDir as a parameter <$dirPath>")
-    // receive the path from the arguments
-    config = config
-      .withValue(
-        "odinson.textDir",
-        ConfigValueFactory.fromAnyRef(new File(dirPath, "text").getAbsolutePath)
-      )
-      // re-compute the index and docs path's
-      .withValue(
-        "odinson.docsDir",
-        ConfigValueFactory.fromAnyRef(new File(dirPath, "docs").getAbsolutePath)
-      )
-      .withValue(
-        "odinson.processorType",
-        ConfigValueFactory.fromAnyRef(processor)
-      )
-  }
-
-  val textDir = config.apply[File]("odinson.textDir")
-  val docsDir = config.apply[File]("odinson.docsDir")
-  val processorType = config.apply[String]("odinson.extra.processorType")
+  // val textDir = config.apply[File]("odinson.textDir")
+  // val docsDir = config.apply[File]("odinson.docsDir")
+  // val processorType = config.apply[String]("odinson.extra.processorType")
+  print("textdir" + args(0))
+  val textDir = new File(args(0))
+  val docsDir = new File(args(1))
+  val processorType = args(2)
 
   val processor: Processor = getProcessor(processorType)
 
@@ -53,9 +56,9 @@ object AnnotateText extends App with LazyLogging {
     logger.warn(s"Making directory $docsDir")
     docsDir.mkdirs()
   }
-
+  logger.info(s"Start")
   processor.annotate("this") // load all required models
-
+  logger.info(s"Resource Loaded")
   def annotateTextFile(f: File): Document = {
     val text = f.readString()
     val doc = processor.annotate(text)
@@ -65,6 +68,7 @@ object AnnotateText extends App with LazyLogging {
   }
 
   // NOTE parses the documents in parallel
+  var count = 0
   for (f <- textDir.listFilesByWildcard("*.txt", caseInsensitive = true, recursive = true).par) {
     val docFile = ExtraFileUtils.resolveFileWithNewExtension(f, textDir, docsDir, ".json.gz")
     Ensuring(docFile.getParentFile.exists())
@@ -77,11 +81,16 @@ object AnnotateText extends App with LazyLogging {
         docFile.writeString(doc.toJson)
       } match {
         case Success(_) =>
-          logger.info(s"Annotated ${f.getCanonicalPath}")
+          count += 1
+          if (count % 1000 == 0){
+            logger.info(s"Annotated ${count} documents")
+          }
+          //logger.info(s"Annotated ${f.getCanonicalPath}")
         case Failure(e) =>
           logger.error(s"Failed to process ${f.getName}", e)
       }
     }
   }
+  logger.info(s"Annotation Finished")
 
 }

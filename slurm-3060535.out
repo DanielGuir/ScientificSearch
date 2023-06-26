@@ -1,0 +1,40 @@
+/var/lib/slurm-llnl/slurmd/job3060535/slurm_script: line 3: ​: command not found
++ ​
+/var/lib/slurm-llnl/slurmd/job3060535/slurm_script: line 7: ​: command not found
++ allCommand=
++ '[' 2 -gt 0 ']'
++ allCommand='  sbt '
++ shift
++ '[' 1 -gt 0 ']'
++ allCommand='   sbt  extra/runMain ai.lum.odinson.extra.AnnotateText /usr/xtmp/rg315/generated_20181220_10000/0/ /usr/xtmp/rg315/annotated_documents/ CluProcessor '
++ shift
++ '[' 0 -gt 0 ']'
++ ​
+/var/lib/slurm-llnl/slurmd/job3060535/slurm_script: line 21: ​: command not found
++ sbt extra/runMain ai.lum.odinson.extra.AnnotateText /usr/xtmp/rg315/generated_20181220_10000/0/ /usr/xtmp/rg315/annotated_documents/ CluProcessor
+[info] welcome to sbt 1.6.2 (Ubuntu Java 11.0.18)
+[info] loading settings for project scientificsearch-build-build-build from metals.sbt ...
+[info] loading project definition from /usr/project/xtmp/rg315/ScientificSearch/project/project/project
+[info] loading settings for project scientificsearch-build-build from metals.sbt ...
+[info] loading project definition from /usr/project/xtmp/rg315/ScientificSearch/project/project
+[success] Generated .bloop/scientificsearch-build-build.json
+[success] Total time: 1 s, completed May 1, 2023, 5:55:25 AM
+[info] loading settings for project scientificsearch-build from plugins.sbt ...
+[info] loading project definition from /usr/project/xtmp/rg315/ScientificSearch/project
+[success] Generated .bloop/scientificsearch-build.json
+[success] Total time: 3 s, completed May 1, 2023, 5:55:29 AM
+[info] loading settings for project core from build.sbt ...
+[info] loading settings for project extra from build.sbt ...
+[info] loading settings for project frontend from build.sbt ...
+[info] loading settings for project scientificsearch from build.sbt,version.sbt ...
+[info] set current project to scientificsearch (in build file:/usr/project/xtmp/rg315/ScientificSearch/)
+[warn] there's a key that's not used by any other settings/tasks:
+[warn]  
+[warn] * ThisBuild / publishMavenStyle
+[warn]   +- /usr/project/xtmp/rg315/ScientificSearch/build.sbt:130
+[warn]  
+[warn] note: a setting might still be used by a command; to exclude a key from this `lintUnused` check
+[warn] either append it to `Global / excludeLintKeys` or call .withRank(KeyRanks.Invisible) on the key
+[error] Expected whitespace character
+[error] extra/runMain
+[error]              ^
